@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halkawt Muhammed | Senior MEAL & Information Management Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            margin: 15px auto 30px;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #6e8efb, #a777e3);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .active-nav::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href="#" class="text-2xl font-bold gradient-text">Halkawt Muhammed</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link active-nav">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#expertise" class="nav-link">Expertise</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="nav-link active-nav">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#expertise" class="nav-link">Expertise</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Halkawt Muhammed</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Senior MEAL Information Management & Reporting Specialist</h2>
+                    <p class="text-lg mb-8">Transforming data into actionable insights with over 10 years of experience in humanitarian information systems and advanced analytics.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="px-6 py-3 bg-white text-purple-700 font-semibold rounded-full hover:bg-gray-100 transition duration-300">Contact Me</a>
+                        <a href="#projects" class="px-6 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-700 transition duration-300">View Projects</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white bg-opacity-20 absolute -top-6 -left-6"></div>
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white bg-opacity-10 absolute -bottom-6 -right-6"></div>
+                        <img src="https://i.imgur.com/L3SUy5p.jpeg" alt="Halkawt Muhammed" class="relative z-10 w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Profile Summary</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg mb-8 text-center">
+                    Senior Information Management & Reporting Specialist with over 10 years of experience in data management, analysis, visualization, programming, coding and reporting. Skilled in humanitarian information systems, monitoring & evaluation, and designing interactive dashboards for global organizations and oil companies.
+                </p>
+                <p class="text-lg mb-8 text-center">
+                    Expert in data storytelling, automation, and advanced analytics with a proven track record of delivering high-impact solutions for complex data challenges in humanitarian and development contexts.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+                    <div class="bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="text-4xl gradient-text mb-3">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">Data Management</h3>
+                        <p class="text-gray-600">Collection to visualization</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="text-4xl gradient-text mb-3">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">Analytics</h3>
+                        <p class="text-gray-600">Advanced data analysis</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="text-4xl gradient-text mb-3">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">Automation</h3>
+                        <p class="text-gray-600">Process optimization</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="text-4xl gradient-text mb-3">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">Reporting</h3>
+                        <p class="text-gray-600">UN-style deliverables</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Core Expertise</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-server mr-3 gradient-text"></i>
+                        Information Management & Data Systems
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Data collection, validation, cleaning, storage, security, backup, advanced analytics, and VS code
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Data Validation</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Data Cleaning</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Data Security</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">VS Code</span>
+                    </div>
+                </div>
+                
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-chart-bar mr-3 gradient-text"></i>
+                        Visualization & Dashboards
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Power BI, Tableau, QGIS, ArcGIS, Adobe Illustrator/InDesign, Photoshop, Canva
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Power BI</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Tableau</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">QGIS</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">ArcGIS</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Adobe Suite</span>
+                    </div>
+                </div>
+                
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-code mr-3 gradient-text"></i>
+                        Programming & Automation
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Python, R, SQL Server, VBA, HTML, C#, JavaScript, Task Automation, AI-based tools
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">R</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">JavaScript</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">AI Tools</span>
+                    </div>
+                </div>
+                
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-mobile-alt mr-3 gradient-text"></i>
+                        Data Collection Tools
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        KoBoToolbox, ODK, CommCare, MS Forms
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">KoBoToolbox</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">ODK</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">CommCare</span>
+                    </div>
+                </div>
+                
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-file-alt mr-3 gradient-text"></i>
+                        Reporting & Communication
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        High-quality UN-style reports, proposals, infographics, brochures, and animation videos
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-brain mr-3 gradient-text"></i>
+                        Special Analyses
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        NLP, EDA, sentiment analysis, time-series analysis
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">NLP</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Sentiment Analysis</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Time-Series</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Career Highlights</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline line -->
+                    <div class="absolute left-4 md:left-1/2 h-full w-1 md:-ml-1 bg-gradient-to-b from-purple-400 to-blue-500"></div>
+                    
+                    <!-- Timeline items -->
+                    <div class="mb-12 relative pl-12 md:pl-0 md:flex md:even:flex-row-reverse">
+                        <div class="md:w-5/12 md:px-6">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <h3 class="text-xl font-bold mb-2">IOM</h3>
+                                <p class="text-purple-600 font-semibold mb-2">Senior Information Management & Reporting Associate</p>
+                                <p class="text-gray-600">2024 – Present</p>
+                            </div>
+                        </div>
+                        <div class="md:w-2/12 flex justify-center">
+                            <div class="h-4 w-4 rounded-full bg-gradient-to-r from-purple-400 to-blue-500 absolute left-8 md:left-1/2 md:-ml-2 mt-6"></div>
+                        </div>
+                        <div class="md:w-5/12 md:px-6 mt-6 md:mt-0">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <p>Leading information management initiatives for displacement tracking and humanitarian response.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-12 relative pl-12 md:pl-0 md:flex md:even:flex-row-reverse">
+                        <div class="md:w-5/12 md:px-6">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <h3 class="text-xl font-bold mb-2">IRC</h3>
+                                <p class="text-purple-600 font-semibold mb-2">Senior CRA Officer & Information Management Officer</p>
+                                <p class="text-gray-600">2020 – 2024</p>
+                            </div>
+                        </div>
+                        <div class="md:w-2/12 flex justify-center">
+                            <div class="h-4 w-4 rounded-full bg-gradient-to-r from-purple-400 to-blue-500 absolute left-8 md:left-1/2 md:-ml-2 mt-6"></div>
+                        </div>
+                        <div class="md:w-5/12 md:px-6 mt-6 md:mt-0">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <p>Developed real-time multilingual feedback monitoring systems and led data management for humanitarian programs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-12 relative pl-12 md:pl-0 md:flex md:even:flex-row-reverse">
+                        <div class="md:w-5/12 md:px-6">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <h3 class="text-xl font-bold mb-2">SWEDO</h3>
+                                <p class="text-purple-600 font-semibold mb-2">Information Management Officer</p>
+                                <p class="text-gray-600">2018 – 2020</p>
+                            </div>
+                        </div>
+                        <div class="md:w-2/12 flex justify-center">
+                            <div class="h-4 w-4 rounded-full bg-gradient-to-r from-purple-400 to-blue-500 absolute left-8 md:left-1/2 md:-ml-2 mt-6"></div>
+                        </div>
+                        <div class="md:w-5/12 md:px-6 mt-6 md:mt-0">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <p>Created integrated data collection and analysis systems for multi-governorate programs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-12 relative pl-12 md:pl-0 md:flex md:even:flex-row-reverse">
+                        <div class="md:w-5/12 md:px-6">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <h3 class="text-xl font-bold mb-2">UIMS</h3>
+                                <p class="text-purple-600 font-semibold mb-2">M&E & IM Roles</p>
+                                <p class="text-gray-600">2014 – 2018</p>
+                            </div>
+                        </div>
+                        <div class="md:w-2/12 flex justify-center">
+                            <div class="h-4 w-4 rounded-full bg-gradient-to-r from-purple-400 to-blue-500 absolute left-8 md:left-1/2 md:-ml-2 mt-6"></div>
+                        </div>
+                        <div class="md:w-5/12 md:px-6 mt-6 md:mt-0">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <p>Implemented monitoring and evaluation systems and information management frameworks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative pl-12 md:pl-0 md:flex md:even:flex-row-reverse">
+                        <div class="md:w-5/12 md:px-6">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <h3 class="text-xl font-bold mb-2">Blacklake & Amirco Oil Company</h3>
+                                <p class="text-purple-600 font-semibold mb-2">Monitoring and Evaluation Officer</p>
+                                <p class="text-gray-600">Previous Role</p>
+                            </div>
+                        </div>
+                        <div class="md:w-2/12 flex justify-center">
+                            <div class="h-4 w-4 rounded-full bg-gradient-to-r from-purple-400 to-blue-500 absolute left-8 md:left-1/2 md:-ml-2 mt-6"></div>
+                        </div>
+                        <div class="md:w-5/12 md:px-6 mt-6 md:mt-0">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <p>Developed monitoring systems for oil company operations and performance tracking.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Selected Projects</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="h-48 bg-gradient-to-r from-purple-400 to-blue-500 flex items-center justify-center">
+                        <i class="fas fa-map-marked-alt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Data & Power BI System (IOM)</h3>
+                        <p class="text-gray-700 mb-4">Geographic database for displacement tracking with interactive visualization capabilities.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Power BI</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">GIS</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Data Modeling</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="h-48 bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center">
+                        <i class="fas fa-comments text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">CRA Jira-Power BI System (IRC)</h3>
+                        <p class="text-gray-700 mb-4">Real-time multilingual feedback monitoring tool integrating Jira with Power BI dashboards.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Jira</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Power BI</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">API Integration</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                        <i class="fas fa-chart-pie text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dashboards (SWEDO)</h3>
+                        <p class="text-gray-700 mb-4">Integrated data collection and analysis system for multi-governorate humanitarian programs.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Dashboard</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Data Integration</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Automation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="h-48 bg-gradient-to-r from-pink-500 to-red-500 flex items-center justify-center">
+                        <i class="fas fa-file-alt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Interactive Infographic Reports</h3>
+                        <p class="text-gray-700 mb-4">System for creating interactive infographic reports for humanitarian response monitoring.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Infographics</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Adobe Illustrator</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Data Storytelling</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages & Skills Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold mb-4">Languages</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">English</span>
+                                <span class="text-gray-600">Fluent</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Kurdish</span>
+                                <span class="text-gray-600">Fluent</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar h-2.5 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Arabic</span>
+                                <span class="text-gray-600">Fluent</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Turkish</span>
+                                <span class="text-gray-600">Good</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar h-2.5 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold mb-4">Soft Skills</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg flex items-center">
+                            <div class="mr-4 text-purple-600">
+                                <i class="fas fa-users text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Leadership</h3>
+                                <p class="text-sm text-gray-600">Team Management</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg flex items-center">
+                            <div class="mr-4 text-purple-600">
+                                <i class="fas fa-lightbulb text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Problem Solving</h3>
+                                <p class="text-sm text-gray-600">Critical Thinking</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg flex items-center">
+                            <div class="mr-4 text-purple-600">
+                                <i class="fas fa-clock text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Time Management</h3>
+                                <p class="text-sm text-gray-600">Efficiency</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg flex items-center">
+                            <div class="mr-4 text-purple-600">
+                                <i class="fas fa-comments text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Communication</h3>
+                                <p class="text-sm text-gray-600">Collaboration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="section-divider bg-white"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2">
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl">
+                            <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="mr-4 text-xl">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Email</h4>
+                                        <p>halkawt.m.mawlood@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="mr-4 text-xl">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Phone</h4>
+                                        <p>+964 (0) 750 315 2406</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="mr-4 text-xl">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Location</h4>
+                                        <p>Erbil, Kurdistan Region – Iraq</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <h3 class="text-xl font-semibold mb-4">Connect With Me</h3>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="h-10 w-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="h-10 w-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="h-10 w-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl">
+                            <h3 class="text-xl font-semibold mb-6">Send Me a Message</h3>
+                            <form>
+                                <div class="mb-4">
+                                    <label for="name" class="block mb-2">Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 bg-white bg-opacity-20 border border-white border-opacity-30 rounded focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 placeholder-white placeholder-opacity-70">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="block mb-2">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 bg-white bg-opacity-20 border border-white border-opacity-30 rounded focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 placeholder-white placeholder-opacity-70">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="subject" class="block mb-2">Subject</label>
+                                    <input type="text" id="subject" class="w-full px-4 py-2 bg-white bg-opacity-20 border border-white border-opacity-30 rounded focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 placeholder-white placeholder-opacity-70">
+                                </div>
+                                <div class="mb-6">
+                                    <label for="message" class="block mb-2">Message</label>
+                                    <textarea id="message" rows="4" class="w-full px-4 py-2 bg-white bg-opacity-20 border border-white border-opacity-30 rounded focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 placeholder-white placeholder-opacity-70"></textarea>
+                                </div>
+                                <button type="submit" class="w-full px-6 py-3 bg-white text-purple-700 font-semibold rounded hover:bg-gray-100 transition duration-300">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Halkawt Muhammed. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-purple-400 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-purple-400 transition">Terms of Service</a>
+                    <a href="#home" class="hover:text-purple-400 transition">Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+                
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active-nav');
+                });
+                this.classList.add('active-nav');
+            });
+        });
+        
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 300) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active-nav');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
